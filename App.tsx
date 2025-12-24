@@ -4,17 +4,13 @@ import {
   LayoutDashboard, 
   BookOpen, 
   Calendar, 
-  Package, 
-  Settings as SettingsIcon,
   Bell,
   Heart
 } from 'lucide-react';
-import { View, Course, Schedule, AttendanceRecord, ApkFile, SemesterConfig } from './types';
+import { View, Course, Schedule, AttendanceRecord, SemesterConfig } from './types';
 import DashboardView from './components/DashboardView';
 import CoursesView from './components/CoursesView';
 import ScheduleView from './components/ScheduleView';
-import ApkView from './components/ApkView';
-import SettingsView from './components/SettingsView';
 import { startOfToday, addMonths, format } from 'date-fns';
 
 const App: React.FC = () => {
@@ -38,11 +34,6 @@ const App: React.FC = () => {
     return saved ? JSON.parse(saved) : [];
   });
 
-  const [apks, setApks] = useState<ApkFile[]>(() => {
-    const saved = localStorage.getItem('apks');
-    return saved ? JSON.parse(saved) : [];
-  });
-
   const [semester, setSemester] = useState<SemesterConfig>(() => {
     const saved = localStorage.getItem('semester');
     return saved ? JSON.parse(saved) : {
@@ -54,15 +45,12 @@ const App: React.FC = () => {
   useEffect(() => { localStorage.setItem('courses', JSON.stringify(courses)); }, [courses]);
   useEffect(() => { localStorage.setItem('schedules', JSON.stringify(schedules)); }, [schedules]);
   useEffect(() => { localStorage.setItem('attendance', JSON.stringify(attendance)); }, [attendance]);
-  useEffect(() => { localStorage.setItem('apks', JSON.stringify(apks)); }, [apks]);
   useEffect(() => { localStorage.setItem('semester', JSON.stringify(semester)); }, [semester]);
 
   const navigation = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
     { id: 'courses', label: 'Courses', icon: BookOpen },
     { id: 'schedule', label: 'Schedule', icon: Calendar },
-    { id: 'apks', label: 'APK Manager', icon: Package },
-    { id: 'settings', label: 'Settings', icon: SettingsIcon },
   ];
 
   const renderView = () => {
@@ -75,7 +63,6 @@ const App: React.FC = () => {
             schedules={schedules} 
             semester={semester} 
             setAttendance={setAttendance}
-            apks={apks}
             setActiveView={setActiveView}
           />
         );
@@ -83,10 +70,6 @@ const App: React.FC = () => {
         return <CoursesView courses={courses} setCourses={setCourses} attendance={attendance} schedules={schedules} semester={semester} />;
       case 'schedule':
         return <ScheduleView courses={courses} schedules={schedules} setSchedules={setSchedules} semester={semester} setSemester={setSemester} />;
-      case 'apks':
-        return <ApkView apks={apks} setApks={setApks} />;
-      case 'settings':
-        return <SettingsView apks={apks} setActiveView={setActiveView} />;
       default:
         return <DashboardView 
             courses={courses} 
@@ -94,7 +77,6 @@ const App: React.FC = () => {
             schedules={schedules} 
             semester={semester} 
             setAttendance={setAttendance}
-            apks={apks}
             setActiveView={setActiveView}
           />;
     }

@@ -1,13 +1,15 @@
 
 {
-  "name": "ClassMate - Attendance Tracker",
-  "short_name": "ClassMate",
-  "description": "Professional Attendance and APK Management",
+  "name": "chill Tracker",
+  "short_name": "chill",
+  "description": "Professional Course Attendance & APK Management",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0f172a",
-  "theme_color": "#6366f1",
+  "theme_color": "#4f46e5",
+  "categories": ["education", "productivity"],
   "icons": [
     {
       "src": "https://lh3.googleusercontent.com/gg-dl/ABS2GSmsXjB-dY79GXkWSqn5VfZ0ykV20nv3GUyJOqiVcGC6fwKVn_QqrKUrazeVTfxL7UhSjyR6w9oVnuVEs5Ol-9l1Mvdz0R0VKEISGc2RvDf79eip4Zw9XzxpyZSMlCIjdgsD4AmVOqFLZzzGEaHKFIod6eX3GygvT8zpoPR47nmR6usgRg=s1024-rj",

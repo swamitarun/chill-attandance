@@ -22,18 +22,20 @@ export interface AttendanceRecord {
   status: AttendanceStatus;
 }
 
+export interface SemesterConfig {
+  startDate: string;
+  endDate: string;
+}
+
+// Added ApkFile interface to fix the missing export error in ApkView and SettingsView
 export interface ApkFile {
   id: string;
   name: string;
   size: number;
   uploadDate: string;
   type: string;
-  content?: string; // Base64 or ObjectURL
+  content: string;
 }
 
-export interface SemesterConfig {
-  startDate: string;
-  endDate: string;
-}
-
-export type View = 'dashboard' | 'courses' | 'schedule' | 'settings' | 'apks';
+// Expanded View type to include all available application views
+export type View = 'dashboard' | 'courses' | 'schedule' | 'apks' | 'settings' | 'semester' | 'attendance' | 'lectures';

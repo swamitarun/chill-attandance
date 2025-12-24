@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Course, AttendanceRecord, Schedule, SemesterConfig, AttendanceStatus, ApkFile, View } from '../types';
+import { Course, AttendanceRecord, Schedule, SemesterConfig, AttendanceStatus, View } from '../types';
 import { 
   X, 
   Check, 
@@ -17,7 +17,6 @@ interface Props {
   attendance: AttendanceRecord[];
   schedules: Schedule[];
   semester: SemesterConfig;
-  apks: ApkFile[];
   setAttendance: React.Dispatch<React.SetStateAction<AttendanceRecord[]>>;
   setActiveView: (view: View) => void;
 }
