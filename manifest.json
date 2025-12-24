@@ -1,0 +1,25 @@
+
+{
+  "name": "ClassMate - Attendance Tracker",
+  "short_name": "ClassMate",
+  "description": "Professional Attendance and APK Management",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "https://lh3.googleusercontent.com/gg-dl/ABS2GSmsXjB-dY79GXkWSqn5VfZ0ykV20nv3GUyJOqiVcGC6fwKVn_QqrKUrazeVTfxL7UhSjyR6w9oVnuVEs5Ol-9l1Mvdz0R0VKEISGc2RvDf79eip4Zw9XzxpyZSMlCIjdgsD4AmVOqFLZzzGEaHKFIod6eX3GygvT8zpoPR47nmR6usgRg=s1024-rj",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/gg-dl/ABS2GSmsXjB-dY79GXkWSqn5VfZ0ykV20nv3GUyJOqiVcGC6fwKVn_QqrKUrazeVTfxL7UhSjyR6w9oVnuVEs5Ol-9l1Mvdz0R0VKEISGc2RvDf79eip4Zw9XzxpyZSMlCIjdgsD4AmVOqFLZzzGEaHKFIod6eX3GygvT8zpoPR47nmR6usgRg=s1024-rj",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

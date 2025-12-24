@@ -1,0 +1,8 @@
+{
+  "name": "Copy of ClassMate Attendance & APK Manager",
+  "description": "A comprehensive tool for tracking course attendance with custom schedules, target percentages, and a built-in APK file manager for local storage simulation.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
