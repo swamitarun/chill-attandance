@@ -1,20 +1,72 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Chill Attendance
 
-# Run and deploy your AI Studio app
+A modern attendance tracker for students to manage courses, lecture schedules, and attendance targets in one clean dashboard.
 
-This contains everything you need to run your app locally.
+> ✅ This project was originally created with **Google AI Studio** and then maintained in this repository.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1lRrMr5bUsbagT8vWgevFM5WeccJNp60m
+## Features
 
-## Run Locally
+- Course-wise attendance tracking
+- Attendance target percentage per subject
+- Weekly lecture schedule management
+- Dashboard with quick overview
+- Local data persistence using browser storage
+- Mobile + desktop friendly UI
 
-**Prerequisites:**  Node.js
+## Tech Stack
 
+- React
+- TypeScript
+- Vite
+- date-fns
+- Recharts
+- Lucide Icons
+- Google GenAI SDK (`@google/genai`)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Installation
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+   ```
+2. Create a `.env.local` file in the project root and add your Gemini key:
+   ```env
+   GEMINI_API_KEY=your_api_key_here
+   ```
+
+### Run in Development
+
+```bash
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Publish / Deploy
+
+You can deploy this Vite app on Netlify, Vercel, or any static hosting platform.
+
+- **Build command:** `npm run build`
+- **Output directory:** `dist`
+
+## AI Studio Link
+
+Original AI Studio app:
+https://ai.studio/apps/drive/1lRrMr5bUsbagT8vWgevFM5WeccJNp60m
